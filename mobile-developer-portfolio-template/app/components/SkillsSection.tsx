@@ -6,21 +6,21 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-	{ name: 'React Native', level: 95 },
-	{ name: 'Swift', level: 90 },
-	{ name: 'Kotlin', level: 85 },
-	{ name: 'Flutter', level: 80 },
-	{ name: 'Firebase', level: 88 },
-	{ name: 'App Store Optimization', level: 85 },
+	{ name: 'React', level: 95 },
+	{ name: 'Flutter', level: 92 },
+	{ name: 'Node.js', level: 90 },
+	{ name: 'MongoDB', level: 88 },
+	{ name: 'Ruby', level: 85 },
+	{ name: 'Next.js', level: 87 },
 ];
 
 const SkillsSection = () => {
 	return (
 		<section className="py-16 md:py-20 relative">
 			<div className="container mx-auto px-4">
-				<h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-center">Technical Expertise</h2>
+				<h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-center">Habilidades Técnicas</h2>
 				<p className="text-sm sm:text-base text-gray-400 text-center mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
-					Specialized in modern mobile development technologies and frameworks
+					Atuação prática com tecnologias modernas para desenvolvimento web e mobile, com foco em performance e experiência de usuário.
 				</p>
 
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
@@ -30,26 +30,25 @@ const SkillsSection = () => {
 							<svg className="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
 								<path d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
 							</svg>
-							Core Technologies
+							Stacks Principais
 						</h3>
 						{skills.slice(0, 4).map((skill) => (
 							<div key={skill.name} className="group relative">
 								<div className="flex flex-wrap sm:flex-nowrap justify-between mb-2 gap-2">
-									<div className="flex flex-wrap sm:flex-nowrap items-center gap-2">
+									<div className="flex items-center gap-2">
 										<span className="font-medium">{skill.name}</span>
-										{/* Skill-specific badges */}
-										<div className="flex flex-wrap sm:flex-nowrap gap-1">
-											{skill.name === 'React Native' && (
-												<span className="px-2 py-0.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Cross-Platform</span>
-											)}
-											{skill.name === 'Swift' && (
-												<span className="px-2 py-0.5 text-xs rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20">iOS</span>
-											)}
-											{skill.name === 'Kotlin' && (
-												<span className="px-2 py-0.5 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">Android</span>
+										<div className="flex flex-wrap gap-1">
+											{skill.name === 'React' && (
+												<span className="px-2 py-0.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Frontend</span>
 											)}
 											{skill.name === 'Flutter' && (
-												<span className="px-2 py-0.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Multi-Platform</span>
+												<span className="px-2 py-0.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Mobile</span>
+											)}
+											{skill.name === 'Node.js' && (
+												<span className="px-2 py-0.5 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">Backend</span>
+											)}
+											{skill.name === 'MongoDB' && (
+												<span className="px-2 py-0.5 text-xs rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">NoSQL</span>
 											)}
 										</div>
 									</div>
@@ -65,14 +64,15 @@ const SkillsSection = () => {
 										style={{ width: `${skill.level}%` }}
 									></div>
 								</div>
-								{/* Hover Card with Details */}
+
+								{/* Hover Card */}
 								<div className="hidden lg:block absolute left-full top-0 ml-4 w-48 p-3 rounded-lg bg-gray-800/90 backdrop-blur-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10 border border-gray-700/50">
 									<div className="text-sm space-y-2">
 										<p className="font-medium">{skill.name}</p>
 										<div className="space-y-1 text-xs text-gray-400">
-											<p>• {skill.level}% Proficiency</p>
-											<p>• {skill.level > 90 ? 'Expert' : skill.level > 80 ? 'Advanced' : 'Intermediate'} Level</p>
-											<p>• {Math.round(skill.level / 10)} Years Experience</p>
+											<p>• {skill.level}% de proficiência</p>
+											<p>• {skill.level > 90 ? 'Especialista' : skill.level > 80 ? 'Avançado' : 'Intermediário'}</p>
+											<p>• {Math.round(skill.level / 10)} anos de prática</p>
 										</div>
 									</div>
 								</div>
@@ -80,13 +80,13 @@ const SkillsSection = () => {
 						))}
 					</div>
 
-					{/* Additional Skills */}
+					{/* Specialized Skills */}
 					<div className="space-y-4 sm:space-y-6 px-2">
 						<h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2">
 							<svg className="w-5 h-5 text-purple-400" viewBox="0 0 24 24" fill="currentColor">
 								<path d="M12,0L3,7L4.63,8.27L12,14L19.36,8.27L21,7L12,0M19.37,10.73L12,16.47L4.62,10.73L3,12L12,19L21,12L19.37,10.73M19.37,15.73L12,21.47L4.62,15.73L3,17L12,24L21,17L19.37,15.73" />
 							</svg>
-							Specialized Skills
+							Outras Tecnologias
 						</h3>
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 							{skills.slice(4).map((skill) => (
@@ -106,17 +106,10 @@ const SkillsSection = () => {
 											<span className="text-sm text-purple-400 whitespace-nowrap">{skill.level}%</span>
 										</div>
 									</div>
-									{/* Decorative Background */}
 									<div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
-										{skill.name.includes('Firebase') ? (
-											<svg className="absolute -right-4 -bottom-4 w-24 h-24 text-yellow-500 transform rotate-12" viewBox="0 0 24 24" fill="currentColor">
-												<path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" />
-											</svg>
-										) : (
-											<svg className="absolute -right-4 -bottom-4 w-24 h-24 transform rotate-12" viewBox="0 0 24 24" fill="currentColor">
-												<path d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
-											</svg>
-										)}
+										<svg className="absolute -right-4 -bottom-4 w-24 h-24 text-purple-500 transform rotate-12" viewBox="0 0 24 24" fill="currentColor">
+											<path d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
+										</svg>
 									</div>
 								</div>
 							))}
