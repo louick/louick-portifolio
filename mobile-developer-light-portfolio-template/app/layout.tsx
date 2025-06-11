@@ -33,19 +33,19 @@ export const metadata: Metadata = {
 		'Mobile Architecture',
 		'[Your Name]',
 	],
-	authors: [{ name: '[Your Name]' }],
-	creator: '[Your Name]',
+	authors: [{ name: 'Louick Andrade' }],
+	creator: 'Louick Andrade',
 	openGraph: {
 		title: '[Your Name] - Mobile Developer Portfolio',
 		description: 'Passionate mobile developer creating exceptional iOS and Android applications. Explore my projects and app development expertise.',
 		url: 'https://your-domain.com',
-		siteName: '[Your Name] - Portfolio',
+		siteName: 'Louick Andrade - Portfolio',
 		images: [
 			{
 				url: '/og-image.jpg',
 				width: 1200,
 				height: 630,
-				alt: '[Your Name] - Mobile Developer Portfolio',
+				alt: 'Louick Andrade - Mobile Developer Portfolio',
 			},
 		],
 		locale: 'en_US',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: '[Your Name] - Mobile Developer',
+		title: 'Louick Andrade - Mobile Developer',
 		description: 'Passionate mobile developer creating exceptional iOS and Android applications. Explore my projects and app development expertise.',
 		creator: '@yourusername',
 		images: ['/og-image.jpg'],
