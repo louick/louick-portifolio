@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: '[Your Name] - Mobile Developer',
+	title: 'Louick Andrade - Mobile Developer',
 	description:
 		'Welcome to my portfolio! I am a passionate mobile developer crafting beautiful and performant apps for iOS and Android. Specializing in native and cross-platform development, I create engaging mobile experiences that users love.',
 	keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 		'App Store',
 		'Play Store',
 		'Mobile Architecture',
-		'[Your Name]',
+		'Louick Andrade',
 	],
 	authors: [{ name: 'Louick Andrade' }],
 	creator: 'Louick Andrade',
