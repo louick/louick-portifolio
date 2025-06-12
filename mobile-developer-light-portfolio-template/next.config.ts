@@ -6,8 +6,7 @@ const isProd = process.env.NODE_ENV === "production";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
-
-  // só prefixa os assets em produção
+  // Prefixa apenas assets (CSS/JS) em produção
   assetPrefix: isProd ? "/louick-portifolio/" : "",
 };
 
