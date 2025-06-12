@@ -5,15 +5,10 @@
   "homepage": "https://louick.github.io/louick-portifolio",
   "scripts": {
     "dev": "next dev --turbopack",
-
     "build": "next build",
-    "export": "next export",
-
-    "predeploy": "npm run build && npm run export",
-    "deploy": "gh-pages -d out",
-
+    "predeploy": "npm run build && rm -rf docs && mv out docs",
+    "deploy": "gh-pages -d docs",
     "start": "next start",
-
     "lint": "next lint"
   },
   "dependencies": {

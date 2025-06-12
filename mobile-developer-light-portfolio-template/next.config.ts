@@ -5,12 +5,9 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-
-  // gera saída estática em out/
   output: "export",
 
-  // quando em produção, aplica o basePath para GitHub Pages
-  basePath: isProd ? "/louick-portifolio" : "",
+  // só prefixa os assets em produção
   assetPrefix: isProd ? "/louick-portifolio/" : "",
 };
 
