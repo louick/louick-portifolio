@@ -1,12 +1,8 @@
-// next.config.ts
-import type { NextConfig } from "next";
-
-const isProd = process.env.NODE_ENV === "production";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "export",
-  assetPrefix: isProd ? "/louick-portifolio/" : "",
+  output: 'export',
   images: {
     unoptimized: true
   }
